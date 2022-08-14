@@ -6,5 +6,6 @@ export class AuthProp {
   password: string;
   @IsNotEmpty()
   @IsNotEmpty()
+  @IsString()
   name: string;
 }
