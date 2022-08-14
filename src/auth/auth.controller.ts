@@ -7,7 +7,6 @@ export class AuthController {
 
   @Post('signup')
   signup(@Body() dto: AuthProp) {
-    const { name, password } = dto;
-    return 'hello world';
+    return this.authService.signUp(dto);
   }
 }
