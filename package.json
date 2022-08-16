@@ -5,6 +5,9 @@
   "description": "Nest TypeScript starter repository",
   "license": "MIT",
   "scripts": {
+    "db:dev:rm": "docker compose rm dev-db -d -f -v",
+    "db:dev:up": "docker compose up dev-db -d",
+    "db:dev:restart": "npm db:dev:rm && npm",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
